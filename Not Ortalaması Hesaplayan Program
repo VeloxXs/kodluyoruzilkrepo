@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class NotOrtalamasi {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Derslerin notlarını kullanıcıdan alma
+        System.out.print("Matematik Notu: ");
+        int mat = scanner.nextInt();
+
+        System.out.print("Fizik Notu: ");
+        int fizik = scanner.nextInt();
+
+        System.out.print("Kimya Notu: ");
+        int kimya = scanner.nextInt();
+
+        System.out.print("Türkçe Notu: ");
+        int turkce = scanner.nextInt();
+
+        System.out.print("Tarih Notu: ");
+        int tarih = scanner.nextInt();
+
+        System.out.print("Müzik Notu: ");
+        int muzik = scanner.nextInt();
+
+        // Ortalamayı hesaplama
+        double ortalama = (mat + fizik + kimya + turkce + tarih + muzik) / 6.0;
+
+        // Sonucu ternary operator ile belirleme
+        String sonuc = (ortalama >= 60) ? "Sınıfı Geçti" : "Sınıfta Kaldı";
+
+        // Sonuçları ekrana yazdırma
+        System.out.println("Ortalamanız: " + ortalama);
+        System.out.println(sonuc);
+
+        scanner.close();
+    }
+}
