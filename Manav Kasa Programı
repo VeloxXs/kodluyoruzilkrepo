@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class Manav {
+    public static void main(String[] args) {
+        System.out.println("Manav uygulamasina Hosgeldiniz");
+        int armut,elma,domates,muz,patlican;
+        String urunler = "Armut = 2.14\n"
+                + "elma = 3.67\n"
+                + "domates = 1.11\n"
+                + "muz = 0.95\n"
+                + "Patlican = 5.0\n";
+         double armutFiyat = 2.14;
+        double elmaFiyat = 3.67;
+        double domatesFiyat = 1.11;
+        double muzFiyat = 0.95;
+        double patlicanFiyat = 5.00;
+        
+        System.out.println("Manavdaki urunler ve fiyatlari " );
+        System.out.println("***********");
+        System.out.print(""+urunler);
+        System.out.println("***********");
+        System.out.println("Hangi urunden ne kadar almak isterseniz sirayla yazin");
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Kac kilo Armut: ");
+        armut = scan.nextInt();
+        System.out.print("Kac kilo Elma: ");
+        elma = scan.nextInt();
+        System.out.print("Kac kilo Domates: ");
+        domates= scan.nextInt();
+        System.out.print("Kac kilo Muz: ");
+        muz= scan.nextInt();
+        System.out.print("Kac kilo Patlican: ");
+        patlican= scan.nextInt();
+        
+        double toplamTutar = (armut * armutFiyat) + (elma * elmaFiyat) + (domates * domatesFiyat) +
+                             (muz * muzFiyat) + (patlican* patlicanFiyat);
+
+        System.out.printf("Toplam Tutar : %.2f TL\n", toplamTutar);
+        
+    }
+}
