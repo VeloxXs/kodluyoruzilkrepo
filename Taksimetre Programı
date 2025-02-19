@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Taksimetre {
+    
+    public static void main(String[] args) {
+        int sabitUcret = 20;
+        int km;
+        int acilisUcreti=10;
+        double kmBasiUcret = 2.20; 
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Taksimize hosgeldniz...");
+        System.out.println("*******");
+        System.out.println("Acilis ucreti: " + acilisUcreti);
+        System.out.println("Sabit ucret: " + sabitUcret);
+        System.out.println("Km Basi ucret: "+ kmBasiUcret);
+        System.out.println("*******");
+        System.out.println("Kac km yol gideceginizi giriniz...");
+          km = scan.nextInt();
+        System.out.println("Gitmek istediginiz km = (" +km +") Hesaplaniyor...");
+        double tutar = km*(kmBasiUcret)+acilisUcreti;
+        
+        if(tutar<=20){
+            System.out.println("Kisa mesafe uygulanacagi icin sabit ucret alinacaktir...");
+            System.out.println("Odenecek tutar Sabit Ucret = " +sabitUcret);
+            
+        }else{
+            System.out.println("Odenecek toplam tutar :" + tutar);
+        }
+        System.out.println("Bizleri tercih ettiginiz icin Tesekkurler...");
+           
+    }
+}
