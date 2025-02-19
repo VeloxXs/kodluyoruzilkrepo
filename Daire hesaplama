@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Daire {
+    public static void main(String[] args) {
+        
+        double yariCap;
+        double piSayisi = 3.14;
+        System.out.println("Dairenin alanini ve cevresini hesaplayan program");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Dairenin yari capini giriniz...");
+        yariCap = scan.nextDouble();
+        System.out.println("Alan Hesaplaniyor...");
+        double daireAlani= piSayisi*yariCap*yariCap ;
+        System.out.println("Dairenin alani = " +daireAlani);
+        System.out.println("Cevre Hesaplaniyor...");
+        double daireCevresi = 2*piSayisi*yariCap;
+        System.out.println("Dairenin Cevresi = " + daireCevresi);
+        
+        double merkezAci;
+        System.out.println("Merkez acisi bilinen dairenin merkez acisini giriniz..");
+        merkezAci = scan.nextDouble();
+        System.out.println("Bu daire diliminin alani hesaplaniyor...");
+        double dilimAlani= ((piSayisi*yariCap*yariCap)*merkezAci)/360;
+        System.out.println("Bu daire diliminin alani : " + dilimAlani);        
+        
+        
+        
+        
+    }
+}
