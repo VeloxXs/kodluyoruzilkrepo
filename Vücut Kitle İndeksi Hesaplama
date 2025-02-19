@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class KitleEndeksi {
+    public static void main(String[] args) {
+        double boy,kilo;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Vucut Kitle endeksi hesaplayiciya hosgeldiniz...");
+        
+        System.out.println("Boyunuzu giriniz(lütfen santimetre olarak giriniz)");
+        boy = scan.nextDouble();
+        System.out.println("Kilonuzu giriniz(Lütfen kilogram olarak giriniz)");
+        kilo = scan.nextDouble();
+        System.out.println("Boyunuz: " +boy+ " Kilonuz : "+ kilo);
+        
+        double hesaplayici = kilo/(boy/100*boy/100);
+        
+        System.out.println("Vucut kitle endeksiniz hesaplaniyor...");
+        
+        System.out.println("Vucut kitle endeksiniz: "+ hesaplayici);
+        
+        if(hesaplayici>=30){
+            System.out.println("Obez sınıfındasiniz Kilo vermeniz tavsiye edilir");
+        }else if(hesaplayici>19 && hesaplayici<25){
+            System.out.println("Saglikli araliktasiniz");
+        }else if(hesaplayici<19){
+            System.out.println("Dusuk kilolu sınıfındasiniz kilo almaniz tavsiye edilir");
+        }
+    
+    
+    }
+}
