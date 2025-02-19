@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class KdvHesaplama {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Kullanıcıdan tutarı alma
+        System.out.print("Para değerini giriniz: ");
+        double tutar = scanner.nextDouble();
+
+        // KDV oranını belirleme
+        double kdvOrani = (tutar > 1000) ? 0.08 : 0.18;
+
+        // KDV tutarını ve KDV'li fiyatı hesaplama
+        double kdvTutari = tutar * kdvOrani;
+        double kdvliFiyat = tutar + kdvTutari;
+
+        // Sonuçları ekrana yazdırma
+        System.out.println("KDV'siz Fiyat: " + tutar);
+        System.out.println("KDV Oranı: %" + (kdvOrani * 100));
+        System.out.println("KDV Tutarı: " + kdvTutari);
+        System.out.println("KDV'li Fiyat: " + kdvliFiyat);
+
+        scanner.close();
+    }
+}
