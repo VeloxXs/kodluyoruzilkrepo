@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Alan {
+    public static void main(String[] args) {
+        int a,b;
+        Scanner girdi = new Scanner(System.in);
+        System.out.println("Üçgenin 1.Kenarını giriniz...");
+        a= girdi.nextInt();
+        System.out.println("Üçgenin 2.Kenarını giriniz...");
+        b = girdi.nextInt();
+        double c = Math.sqrt((a*a)+(b*b));
+        System.out.println("Üçgenin hipotenüsü = " +c);
+        System.out.println("Ucgenin çevresi " +(a+b+c));
+        
+        double Alan = (a*b)/2;
+        System.out.println("Ucgenin alanı = " +Alan);
+    }
+}
