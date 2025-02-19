@@ -1,30 +1,32 @@
-# Kodluyoruz Ilk Repo
+# Kodluyoruz İlk Repo
 
-Bu repo [Kodluyoruz](https://www.kodluyoruz.org) Front-End Eğitiminde oluşturduğumuz ilk repo. İçerisinde bir adet README dosyası, bir adet de index.html barındırıyor.
+Bu Repo [Kodluyoruz](https://kodluyoruz.org/) Front-End Eğitiminde oluşturduğumuz ilk repo. İçerisinde bir adet README dosyası, bir adet index.html barındırıyor.
 
-![github](figures/github.png)
+![Kodluyoruz Logo](https://raw.githubusercontent.com/Kodluyoruz/taskforce/git/git/markdown-nedir-nasil-kullaniriz-/figures/kodluyoruz_logo.jpg)
 
-## Installation
+# Installation
 
-Öncelikle projeyi clonelayın. (Buraya sizin reponuzdan aldığınız link gelecek)
+Öncelikle projeyi clonelayın.
 
-```bash
-git clone https://github.com/cengizcmataraci/kodluyoruzilkrepo.git
+```s
+git clone https://github.com/furkanlebit7/kodluyoruzilkrepo.git
 ```
 
-## Usage
+# Usage
 
 Projeyi cloneladıktan sonra Visual Studio Code programında açınız.
 
-Linux için:
-```linux
+Linux İçin:
+
+```
 cd kodluyoruzilkrepo
 code .
 ```
 
-## Contributing
+# Contributing
+
 Pull requestler kabul edilir. Büyük değişiklikler için, lütfen önce neyi değiştirmek istediğinizi tartışmak için bir konu açınız.
 
+# License
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[MİT](https://choosealicense.com/licenses/mit/)
