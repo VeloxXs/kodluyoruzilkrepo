@@ -1,0 +1,17 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        
+       int sicaklik;
+       Scanner input = new Scanner(System.in);
+         System.out.print("Sıcaklık Değerini Giriniz: ");
+         sicaklik = input.nextInt();
+         String etkinlik = (sicaklik < 5) ? "Kayak" :
+                  (sicaklik < 15) ? "Sinema" :
+                  (sicaklik < 25) ? "Piknik" : "Yüzme";
+        System.out.println(etkinlik + " yapmayı öneririm.");
+
+    }
+}
