@@ -1,0 +1,58 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        int not, fizik, turkce, kimya, muzik;
+        Scanner input = new Scanner(System.in);
+       while(true){
+        System.out.println("fizik notunuzu giriniz(0-100):");
+        fizik = input.nextInt();
+        if (fizik < 0 || fizik > 100) {
+            System.out.println("Lütfen 0-100 arasında bir değer giriniz.");
+            break;
+        }
+        if(fizik < 55) System.out.println("Fizik dersinden kaldınız.");
+        break;
+       }
+       while(true){
+        System.out.println("kimya notunuzu giriniz(0-100):");
+        kimya = input.nextInt();
+        if (kimya < 0 || kimya > 100) {
+            System.out.println("Lütfen 0-100 arasında bir değer giriniz.");
+            break;
+        }
+        if(kimya < 55) System.out.println("Kimya dersinden kaldınız.");
+        break;
+       }
+       while(true){
+        System.out.println("Müzik notunuzu giriniz(0-100):");
+        muzik = input.nextInt();
+        if (muzik < 0 || muzik > 100) {
+            System.out.println("Lütfen 0-100 arasında bir değer giriniz.");
+            break;
+        }
+        if(muzik < 55) System.out.println("Müzik dersinden kaldınız.");
+        break;
+       }    
+         while(true){
+          System.out.println("Türkçe notunuzu giriniz(0-100):");
+          turkce = input.nextInt();
+          if (turkce < 0 || turkce > 100) {
+                System.out.println("Lütfen 0-100 arasında bir değer giriniz.");
+                break;
+          }
+          if(turkce < 55) System.out.println("Turkce dersinden kaldiniz.");
+          break;
+         }
+
+         System.out.println("Notlar:");
+            System.out.println("Fizik: " + fizik);
+            System.out.println("Kimya: " + kimya);
+            System.out.println("Müzik: " + muzik);
+            System.out.println("Türkçe: " + turkce);
+            double average = (fizik + kimya + muzik + turkce) / 4.0;
+            System.out.println("Ortalama: " + average);
+    }
+}
