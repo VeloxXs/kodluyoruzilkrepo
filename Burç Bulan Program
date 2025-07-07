@@ -1,0 +1,144 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        String ay;
+        int gun;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Lütfen dogdugunuz ayi giriniz: ");
+        ay = input.nextLine().toLowerCase();
+        System.out.print("Lütfen dogdugunuz gunu giriniz: ");
+        gun = input.nextInt();
+
+        if (ay.equalsIgnoreCase("ocak")) {
+            if (gun >= 1 && gun <= 31) {
+                System.out.println("Doğum tarihiniz: " + gun + " Ocak");
+                if (gun < 22)
+                    System.out.println("Burcunuz: Oğlak");
+                else
+                    System.out.println("Burcunuz: Kova");
+            } else {
+                System.out.println("Ocak ayı için geçersiz gün!");
+            }
+        }
+        else if (ay.equalsIgnoreCase("subat")) {
+            if (gun >= 1 && gun <= 28) {
+                System.out.println("Doğum tarihiniz: " + gun + " Şubat");
+                if (gun < 20)
+                    System.out.println("Burcunuz: Kova");
+                else
+                    System.out.println("Burcunuz: Balık");
+            } else {
+                System.out.println("Şubat ayı için geçersiz gün!");
+            }
+        } else if (ay.equalsIgnoreCase("mart")) {
+            if (gun >= 1 && gun <= 31) {
+                System.out.println("Doğum tarihiniz: " + gun + " Mart");
+                if (gun < 21)
+                    System.out.println("Burcunuz: Balık");
+                else
+                    System.out.println("Burcunuz: Koç");
+            } else {
+                System.out.println("Mart ayı için geçersiz gün!");
+            }
+        } else if (ay.equalsIgnoreCase("nisan")) {
+            if (gun >= 1 && gun <= 30) {
+                System.out.println("Doğum tarihiniz: " + gun + " Nisan");
+                if (gun < 21)
+                    System.out.println("Burcunuz: Koç");
+                else
+                    System.out.println("Burcunuz: Boğa");
+            } else {
+                System.out.println("Nisan ayı için geçersiz gün!");
+            }
+        } else if (ay.equalsIgnoreCase("mayis")) {
+            if (gun >= 1 && gun <= 31) {
+                System.out.println("Doğum tarihiniz: " + gun + " Mayıs");
+                if (gun < 22)
+                    System.out.println("Burcunuz: Boğa");
+                else
+                    System.out.println("Burcunuz: İkizler");
+            } else {
+                System.out.println("Mayıs ayı için geçersiz gün!");
+            }
+        } else if (ay.equalsIgnoreCase("haziran")) {
+            if (gun >= 1 && gun <= 30) {
+                System.out.println("Doğum tarihiniz: " + gun + " Haziran");
+                if (gun < 23)
+                    System.out.println("Burcunuz: İkizler");
+                else
+                    System.out.println("Burcunuz: Yengeç");
+            } else {
+                System.out.println("Haziran ayı için geçersiz gün!");
+            }
+        }
+        else if (ay.equalsIgnoreCase("temmuz")) {
+            if (gun >= 1 && gun <= 31) {
+                System.out.println("Doğum tarihiniz: " + gun + " Temmuz");
+                if (gun < 23)
+                    System.out.println("Burcunuz: Yengeç");
+                else
+                    System.out.println("Burcunuz: Aslan");
+            } else {
+                System.out.println("Temmuz ayı için geçersiz gün!");
+            }
+        } else if (ay.equalsIgnoreCase("agustos")) {
+            if (gun >= 1 && gun <= 31) {
+                System.out.println("Doğum tarihiniz: " + gun + " Ağustos");
+                if (gun < 23)
+                    System.out.println("Burcunuz: Aslan");
+                else
+                    System.out.println("Burcunuz: Başak");
+            } else {
+                System.out.println("Ağustos ayı için geçersiz gün!");
+            }
+        } else if (ay.equalsIgnoreCase("eylul")) {
+            if (gun >= 1 && gun <= 30) {
+                System.out.println("Doğum tarihiniz: " + gun + " Eylül");
+                if (gun < 23)
+                    System.out.println("Burcunuz: Başak");
+                else
+                    System.out.println("Burcunuz: Terazi");
+            } else {
+                System.out.println("Eylül ayı için geçersiz gün!");
+            }
+        } else if (ay.equalsIgnoreCase("ekim")) {
+            if (gun >= 1 && gun <= 31) {
+                System.out.println("Doğum tarihiniz: " + gun + " Ekim");
+                if (gun < 23)
+                    System.out.println("Burcunuz: Terazi");
+                else
+                    System.out.println("Burcunuz: Akrep");
+            } else {
+                System.out.println("Ekim ayı için geçersiz gün!");
+            }
+        } else if (ay.equalsIgnoreCase("kasim")) {
+    if (gun >= 1 && gun <= 30) {
+        System.out.println("Doğum tarihiniz: " + gun + " Kasım");
+        if (gun < 22)
+            System.out.println("Burcunuz: Akrep");
+        else
+            System.out.println("Burcunuz: Yay");
+    } else {
+        System.out.println("Kasım ayı için geçersiz gün!");
+    }
+}
+else if (ay.equalsIgnoreCase("aralik")) {
+    if (gun >= 1 && gun <= 31) {
+        System.out.println("Doğum tarihiniz: " + gun + " Aralık");
+        if (gun < 22)
+            System.out.println("Burcunuz: Yay");
+        else
+            System.out.println("Burcunuz: Oğlak");
+    } else {
+        System.out.println("Aralık ayı için geçersiz gün!");
+    }
+}
+else {
+    System.out.println("Geçersiz ay ismi!");
+}
+        input.close();
+    }
+}
