@@ -1,0 +1,24 @@
+
+import java.util.Scanner;
+
+
+
+public class Main {
+    public static void main(String[] args) {
+       
+       System.out.println("Uslu sayi alma programina hosgeldiniz");
+       Scanner scan = new Scanner(System.in);
+        System.out.print("Lutfen taban sayisini giriniz: ");
+        int tsayi = scan.nextInt();
+        System.out.print("Lutfen ussunu giriniz: ");
+        int ussayi = scan.nextInt();
+        int total = 1;
+
+        for(int i = 1 ; i <= ussayi; i++){
+            total = total * tsayi;
+            
+        }
+
+        System.out.println("Sonuc: " + total);
+    }
+}
