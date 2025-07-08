@@ -1,0 +1,32 @@
+
+import java.util.Scanner;
+
+
+
+public class Main {
+    public static void main(String[] args) {
+       
+        System.out.println("Kombinasyon hesaplama programına hoş geldiniz!");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Lütfen n değerini giriniz: ");
+        int n = scanner.nextInt();
+        System.out.print("Lütfen r değerini giriniz: ");
+        int r = scanner.nextInt();
+        scanner.close();
+        int nfakt = 1;
+        for(int i = 1; i <=n; i++){
+            nfakt *= i;
+        }
+        int rfakt = 1;
+        for(int i = 1; i <=r; i++){
+            rfakt *= i;
+        }
+        int nrfakt = 1;
+        for(int i = 1; i <=(n-r); i++){
+            nrfakt *= i;
+        }        int kombinasyon = nfakt / (rfakt * nrfakt);
+        System.out.println("Kombinasyon sonucu: " + kombinasyon);
+        
+     
+    }
+}
