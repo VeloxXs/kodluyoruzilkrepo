@@ -1,0 +1,28 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+       
+        int sayi;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Lütfen bir sayı giriniz: ");
+        sayi = scanner.nextInt();
+
+            String sonuc = "";
+        for(int i = 1; i <= sayi; i++){
+            if(i%3 == 0 && i%4== 0){
+                sonuc += i + ", ";
+            }
+        }
+        if (!sonuc.isEmpty()) {
+            sonuc = sonuc.substring(0, sonuc.length() - 2);
+            System.out.println("3 ve 4'e tam bölünebilen sayılar: " + sonuc);
+        } else {
+            System.out.println("3 ve 4'e tam bölünebilen sayı bulunamadı.");
+    }
+
+
+    }
+}
