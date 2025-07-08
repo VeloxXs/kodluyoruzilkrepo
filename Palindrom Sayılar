@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static boolean isPalindrom(int sayi) {
+        int orijinalSayi = sayi;
+        int tersSayi = 0;
+
+        while (sayi != 0) {
+            int basamak = sayi % 10;
+            tersSayi = tersSayi * 10 + basamak;
+            sayi /= 10;
+        }
+
+        return orijinalSayi == tersSayi;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Bir sayı girin: ");
+        int girilenSayi = scanner.nextInt();
+
+        if (isPalindrom(girilenSayi)) {
+            System.out.println(girilenSayi + " bir palindrom sayıdır.");
+        } else {
+            System.out.println(girilenSayi + " bir palindrom sayı değildir.");
+        }
+
+        scanner.close();
+    }
+}
