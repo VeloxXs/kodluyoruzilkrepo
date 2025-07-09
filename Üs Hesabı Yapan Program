@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class UsHesabi {
+    
+    public static void  usHesapla(int x, int y){
+        int usSayi = x ;
+        for(int i = 1; i< y;  i++){
+            x = usSayi*x; 
+        }
+        System.out.println("Sonuc: " + x);
+       
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int secim;
+        do{
+            System.out.println("Us alma programi");
+            System.out.println("1- Uygulamayi baslat");
+            System.out.println("0- Uygulamayi sonlandir");
+             secim = scan.nextInt();
+            if(secim == 1){
+                System.out.println("Us alinacak sayinin tabanini giriniz: ");
+                int taban = scan.nextInt();
+                System.out.println("Us sayısını giriniz: ");
+                int us = scan.nextInt();
+                usHesapla(taban, us);
+                
+            }else if(secim == 0){
+                System.out.println("Uygulamadan cikiliyor...");
+            }else{
+                System.out.println("Gecersiz secim yaptiniz...");
+            }
+        }while(secim !=0);
+            
+        
+       
+            
+        
+        
+    }
+}
