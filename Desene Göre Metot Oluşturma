@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class DeseneGoreMethod {
+    public static void main(String[] args) {
+        System.out.println("Desen olusturmak istediginiz sayiyi giriniz: ");
+        Scanner scan = new Scanner(System.in);
+        int desen = scan.nextInt();
+        System.out.println("N sayisi :" + desen);
+
+        int[] dizi = new int[1];
+        dizi[0] = desen;
+       int temp = desen;
+        while (temp > 0) {
+            System.out.print(temp + " ");
+            temp -= 5;
+        }
+
+        // 0 veya negatif olan sayı
+        System.out.print(temp + " ");
+
+        // Artırma kısmı
+        while (temp < dizi[0]) {
+            temp += 5;
+            System.out.print(temp + " ");
+        }
+        
+            
+        
+    }
+}
