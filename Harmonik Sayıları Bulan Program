@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class HarmonicSayi {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Sayinizi giriniz: ");
+        double sayi = scan.nextDouble();
+        double toplam = 0.0;
+
+        for(double i = 1; i <= sayi; i++){
+            toplam += (1.0 / i);
+           
+        }
+         System.out.println("Sonuc: " + toplam);
+    }
+}
