@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class ArmstrongSayi {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Hesaplanacak sayiyi giriniz: ");
+        int sayi = scan.nextInt();
+        String sayiStr = Integer.toString(Math.abs(sayi));
+        int basamak = sayiStr.length();
+        int toplam = 0;
+        int geciciSayi = sayi;
+
+        while(geciciSayi != 0){
+            int basamakSayisi = geciciSayi % 10;
+            toplam += Math.pow(basamakSayisi, basamak);
+            geciciSayi /= 10;
+        }
+
+        if(toplam == sayi){
+            System.out.println("Bir amstrong sayidir.");
+        }else{
+            System.out.println("Bir amstrong sayi degildir.");
+        }
+
+
+    
+    }
+}
