@@ -1,0 +1,29 @@
+
+import java.util.Scanner;
+
+public class MaxMin {
+    public static void main(String[] args) {
+        int max, min;
+        System.out.println("Max-Min hesaplayici");
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Kac tane sayi gireceksiniz: ");
+        int sayiAdet = scan.nextInt();
+        scan.nextLine();
+        System.out.print("Birinci sayiyi giriniz: ");
+        int birinciSayi = scan.nextInt();
+        scan.nextLine();
+        max = birinciSayi;
+        min = birinciSayi;
+        for(int i = 2; i<= sayiAdet; i++){
+            System.out.print(i+". sayiyi giriniz: ");
+            int sayi = scan.nextInt();
+            if(sayi>max){
+                max = sayi;
+            }else if(sayi < min){
+                min = sayi;
+            }
+        }
+        System.out.println("Max sayi: " + max);
+        System.out.println("Min sayi: " + min);
+    }
+}
