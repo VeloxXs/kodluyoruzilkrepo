@@ -1,0 +1,76 @@
+import java.util.Scanner;
+public class Atm {
+    public static void main(String[] args) {
+     
+        int secim = 5;
+        int hak = 3;
+        int bakiye = 1500;
+        String passWord, userName;
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("ATM ye hosgeldiniz...");
+            
+        while(hak > 0){
+            System.out.print("Kullanici adinizi giriniz: ");
+            userName = scan.nextLine();
+            System.out.print("Sifrenizi giriniz: ");
+            passWord = scan.nextLine();
+            while(secim != 4){ 
+
+            if(userName.equals("patika") && passWord.equals("dev123") ){
+                System.out.println("Kodluyoruz Bankasına Hosgeldiniz... ");
+                
+                System.out.println("-----Islemler-----");
+                    System.out.println("1- Para Yatirma \n" +
+                        "2- Para Cekme \n" +
+                        "3- Bakiye Sorgula \n" +
+                        "4- Cikis Yap");
+                        System.out.println("Lutfen seciminizi yapiniz...");
+                        secim = scan.nextInt();
+                switch(secim){
+                    case 1: 
+                    System.out.println("Para yatirma Islemleri...");
+                    System.out.println("Yatirmak istediginiz tutari giriniz...");
+                    int tutar = scan.nextInt();
+                    System.out.println("Para yatirma islemi gerceklestiriliyor...");
+                    bakiye += tutar;
+                    System.out.println("Yeni tutar: " + bakiye);
+                    break;
+                    case 2:
+                    System.out.println("Para Cekme Islemleri ...");
+                    System.out.println("Cekmek istediginiz tutari giriniz(Gunde 5000 tlden fazla cekim yapilamaz!):");
+                    int cekim = scan.nextInt();
+                    if(cekim>bakiye ){
+                        System.out.println("Hesabinizda bu kadar bakiye bulunmuyor!");    
+                        
+                    }else if(cekim> 5000){
+                        System.out.println("Gunluk limiti asiyorsunuz 5000den daha kucuk bir miktar cekiniz...");
+                    }else if( cekim <= bakiye && cekim < 5000){
+                        System.out.println("Para cekme islemi gerceklestiriliyor...");
+                        bakiye -= cekim; 
+                        System.out.println("Guncel bakiyeniz..." + bakiye );
+                    }
+                    break;
+                    case 3:
+                    System.out.println("Guncel bakiye" + bakiye);
+                    break;
+                    case 4:
+                    System.out.println("Cikis yapiliyor...");
+                    return;
+
+                }
+
+                
+            }else{
+                hak -= 1;
+                System.out.println("Yanlis kullanici adi veya sifre tekrar deneyiniz (Kalan Hak:)");
+                if(hak == 0){
+                    System.out.println("Hesabiniz Bloke Olmustur Banka ile iletisime geciniz ...");
+                }else{
+                    System.out.println("Kalan Hak: " + hak);
+                }
+            }
+        }
+        }
+    }
+}
