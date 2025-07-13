@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Fibonacci {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Fibonacci serisinin eleman sayısını giriniz: ");
+        int n = scan.nextInt();
+
+        int ilk = 0;
+        int ikinci = 1;
+
+        System.out.print(ilk + " " + ikinci + " ");
+
+        for (int i = 2; i < n; i++) {
+            int sonraki = ilk + ikinci;
+            System.out.print(sonraki + " ");
+            ilk = ikinci;
+            ikinci = sonraki;
+        }
+    }
+}
