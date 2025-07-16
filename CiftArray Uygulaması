@@ -1,0 +1,41 @@
+public class CiftArray {
+    public static void main(String[] args) {
+        int row = 7;
+        int col = 5;
+
+        char[][] letter = new char[row][col];
+
+        // Diziyi boşlukla doldur
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                letter[i][j] = ' ';
+            }
+        }
+
+        // B harfinin çizimi
+        for (int i = 0; i < row; i++) {
+            // İlk sütun (sol dik çizgi)
+            letter[i][0] = '*';
+            
+            // Üst yatay çizgi
+            if (i == 0 || i == row / 2 || i == row - 1) {
+                for (int j = 0; j < col - 1; j++) {
+                    letter[i][j] = '*';
+                }
+            }
+            
+            // Sağ dik çizgi (üst ve alt yarılarda)
+            if (i > 0 && i < row / 2 || i > row / 2 && i < row - 1) {
+                letter[i][col - 1] = '*';
+            }
+        }
+
+        // Yazdır
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                System.out.print(letter[i][j]);
+            }
+            System.out.println();
+        }
+    }
+}
