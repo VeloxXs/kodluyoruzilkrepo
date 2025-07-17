@@ -1,0 +1,21 @@
++----------------------+
+|      Hayvan          |  <<abstract>>
++----------------------+
+| - turAdi: String     |
+| - agirlik: double    |
+| - yas: int           |
++----------------------+
+| + getDosage(): double|
+| + getFeedSchedule(): String |
++----------------------+
+            ▲
+            |
+   ---------------------
+   |        |         |
++-----+  +--------+  +---------+
+| At  |  | Kedigil|  | Kemirgen|
++-----+  +--------+  +---------+
+|              (özelleştirme)  |
+| + getDosage()               |
+| + getFeedSchedule()         |
++-----------------------------+
