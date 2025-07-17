@@ -1,0 +1,42 @@
++--------------------------+
+|      HavaYoluSirketi     |
++--------------------------+
+| - id: String             |
+| - isim: String           |
++--------------------------+
+| +ucusEkle()              |
++--------------------------+
+          |
+          | 1
+          |------------------+
+          |                  |
+          |                  | *
++---------------+    +---------------+
+|     Pilot     |    |     Ucak      |
++---------------+    +---------------+
+| - isim: String|    | - id: String  |
+| - deneyim: int|    | - durum: String (Çalışıyor/Onarımda) |
++---------------+    | - tip: String |
+                     +---------------+
+                            |
+                            | *
+                            |
+                     +----------------+
+                     |   UcakTipi     |
+                     +----------------+
+                     | - ad: String   |
+                     | - gerekenPilotSayisi: int |
+                     +----------------+
+
++------------------+          +------------------+
+|     Ucus         |<-------->|   Havaalani      |
++------------------+    2     +------------------+
+| - id: String     |          | - id: String     |
+| - kalkisSaati:   |          | - isim: String   |
+| - inisSaati:     |          +------------------+
+| - pilot: Pilot   |
+| - yardimciPilot: Pilot     (2 havaalanı: kalkış ve varış)
+| - ucak: Ucak     |
+| - kalkisYeri: Havaalani
+| - varisYeri: Havaalani
++------------------+
